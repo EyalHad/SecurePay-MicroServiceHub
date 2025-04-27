@@ -4,3 +4,7 @@ server:
 spring:
   application:
     name: auth-service
+
+jwt:
+  secret: ${JWT_SECRET:your-secure-secret-key-32bytes-long}
+  expiration-time: ${JWT_EXPIRATION_TIME:3600000} # 1 hour
