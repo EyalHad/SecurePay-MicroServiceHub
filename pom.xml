@@ -23,6 +23,7 @@
 
     <dependencyManagement>
         <dependencies>
+
             <!-- Spring Boot Dependencies -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -31,6 +32,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!-- Spring Cloud Dependencies -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -39,12 +41,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!-- PostgreSQL -->
             <dependency>
                 <groupId>org.postgresql</groupId>
                 <artifactId>postgresql</artifactId>
                 <version>${postgresql.version}</version>
             </dependency>
+
             <!-- JJWT Dependencies -->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
@@ -64,13 +68,35 @@
                 <scope>runtime</scope>
             </dependency>
             <dependency>
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-test</artifactId>
-                <scope>test</scope>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+                <scope>runtime</scope>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+
+        <!-- Testing Dependencies -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
 
 
     <build>
